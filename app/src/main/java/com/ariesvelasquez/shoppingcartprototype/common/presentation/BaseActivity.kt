@@ -19,7 +19,7 @@ abstract class BaseActivity<VB : ViewBinding> :
 
     private var progressDialog: ProgressDialog? = null
 
-    protected open fun extractIntentExtras(savedInstanceState: Bundle?) = Unit
+    protected open fun handleIntentData(savedInstanceState: Bundle?) = Unit
     protected open fun initToolbar(savedInstanceState: Bundle?) = Unit
     protected open fun initViewModel() = Unit
     protected open fun initViews() = Unit // Initialize adapters, etc.
@@ -27,7 +27,7 @@ abstract class BaseActivity<VB : ViewBinding> :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        extractIntentExtras(savedInstanceState)
+        handleIntentData(savedInstanceState)
         bindContentLayout()
         initToolbar(savedInstanceState)
         initViewModel()
