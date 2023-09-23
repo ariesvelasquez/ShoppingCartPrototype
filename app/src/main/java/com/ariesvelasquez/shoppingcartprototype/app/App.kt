@@ -1,6 +1,7 @@
-package com.ariesvelasquez.shoppingcartprototype
+package com.ariesvelasquez.shoppingcartprototype.app
 
 import android.app.Application
+import com.ariesvelasquez.shoppingcartprototype.BuildConfig
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
