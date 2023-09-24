@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/home_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/shopScreen">
+
+    <fragment
+        android:id="@+id/shopScreen"
+        android:name="com.ariesvelasquez.shoppingcartprototype.home.presentation.shop.ShopFragment"
+        tools:layout="@layout/fragment_shop">
+
+        <action
+            android:id="@+id/action_shop_to_cart"
+            app:destination="@id/cartScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartScreen"
+        android:name="com.ariesvelasquez.shoppingcartprototype.home.presentation.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" />
 
 </navigation>

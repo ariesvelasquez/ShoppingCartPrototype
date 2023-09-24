@@ -2,6 +2,7 @@ package com.ariesvelasquez.shoppingcartprototype.home.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.ariesvelasquez.shoppingcartprototype.R
@@ -14,11 +15,13 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
     private val viewModel: HomeViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-
+    override fun initViewModel() {
+        super.initViewModel()
         viewModel.getProducts()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        return super.onCreateOptionsMenu(menu)
     }
 
     override val bindingInflater: (LayoutInflater) -> ActivityHomeBinding

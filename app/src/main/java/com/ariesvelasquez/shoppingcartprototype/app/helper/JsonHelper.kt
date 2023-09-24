@@ -1,4 +1,4 @@
-package com.ariesvelasquez.shoppingcartprototype.common.helper
+package com.ariesvelasquez.shoppingcartprototype.app.helper
 
 import com.google.gson.JsonParseException
 import kotlinx.serialization.decodeFromString

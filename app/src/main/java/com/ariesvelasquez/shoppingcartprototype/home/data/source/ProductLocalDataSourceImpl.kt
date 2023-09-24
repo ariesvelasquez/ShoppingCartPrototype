@@ -1,7 +1,7 @@
 package com.ariesvelasquez.shoppingcartprototype.home.data.source
 
 import android.content.Context
-import com.ariesvelasquez.shoppingcartprototype.common.helper.JsonHelper
+import com.ariesvelasquez.shoppingcartprototype.app.helper.JsonHelper
 import com.ariesvelasquez.shoppingcartprototype.home.data.mapper.Mapper.transform
 import com.ariesvelasquez.shoppingcartprototype.home.data.model.ProductEntity
 import com.ariesvelasquez.shoppingcartprototype.home.domain.model.Product
